@@ -68,7 +68,7 @@ public class Employee {
                 ", secondName='" + secondName + '\'' +
                 ", name='" + name + '\'' +
                 ", middleName='" + middleName + '\'' +
-                ", salary=" + (double) (salary / 100) +
+                ", salary=" + ((double)salary / 100) +
                 ", idDepartment=" + idDepartment +
                 '}';
     }

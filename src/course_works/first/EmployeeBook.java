@@ -26,12 +26,12 @@ public class EmployeeBook {
         return Arrays.stream(employees).filter(Objects::nonNull).map(Employee::getSalary).mapToLong(Long::longValue).sum();
     }
 
-    public void getMinSalaryEmployee() {
+    public void printMinSalaryEmployee() {
         Optional<Employee> employee = Arrays.stream(employees).filter(Objects::nonNull).reduce((e1, e2) -> e1.getSalary() < e2.getSalary() ? e1 : e2);
         System.out.println(employee.map(value -> "Minimum salary : " + value).orElse("not found"));
     }
 
-    public void getMaxSalaryEmployee() {
+    public void printMaxSalaryEmployee() {
         Optional<Employee> employee = Arrays.stream(employees).filter(Objects::nonNull).reduce((e1, e2) -> e1.getSalary() > e2.getSalary() ? e1 : e2);
         System.out.println(employee.map(value -> "Maximum salary : " + value).orElse("not found"));
     }
@@ -40,13 +40,6 @@ public class EmployeeBook {
         long count = Arrays.stream(employees).filter(Objects::nonNull).count();
         return count == 0 ? 0 : getTotalMonthSalary() / count;
     }
-
-//    public void growSalary(int percent) {
-//        for (:
-//             ) {
-//
-//        }
-//    }
 
     public void addEmployee(Employee employee) {
         for (int i = 0; i < employees.length; i++) {
@@ -100,6 +93,24 @@ public class EmployeeBook {
                 System.out.printf("%s %s %s\n", employee.getSecondName(), employee.getName(), employee.getMiddleName());
             }
         }
+    }
+
+    public void growSalary(int percent) {
+        double multiplier = 1 + (double) percent / 100;
+        for (Employee employee: employees) {
+            if (employee != null) {
+                employee.setSalary((long) (employee.getSalary() * multiplier));
+            }
+        }
+    }
+
+    public void  printMinSalaryWithDepartmentID (int id) {
+        Optional<Employee> employee = Arrays.stream(employees)
+                                .filter(Objects::nonNull)
+                                .filter(e -> e.getIdDepartment() == id)
+                                .reduce((e1, e2) -> e1.getSalary() < e2.getSalary() ? e1 : e2);
+        System.out.println(employee.isPresent() ? "Minimum salary in department with id "+ id + " : " + employee
+                                                : "Not found employees with department id " + id);
     }
 
     private boolean compareFullName(Employee employee, String secondName, String name, String middleName) {
