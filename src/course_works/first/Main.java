@@ -5,9 +5,12 @@ public class Main {
         EmployeeBook employeeBook = new EmployeeBook();
         employeeBook.addEmployee(new Employee("Kuf", "Se", "AFg", 753000, 1));
         employeeBook.addEmployee(new Employee("Kud", "Seb", "Ag", 153000, 1));
+        employeeBook.addEmployee(new Employee("Ku", "Se", "Ag", 183000, 2));
 
 
         employeeBook.printAllEmployees();
+        employeeBook.printEmployeesByDepartments();
+        System.out.println("============FULL NAME OF ALL EMPLOYEES============");
         employeeBook.printFullNamesAllEmployees();
         employeeBook.getMinSalaryEmployee();
 

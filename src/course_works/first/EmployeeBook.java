@@ -24,8 +24,6 @@ public class EmployeeBook {
 
     public long getTotalMonthSalary() {
         return Arrays.stream(employees).filter(Objects::nonNull).map(Employee::getSalary).mapToLong(Long::longValue).sum();
-
-
     }
 
     public void getMinSalaryEmployee() {
@@ -42,6 +40,13 @@ public class EmployeeBook {
         long count = Arrays.stream(employees).filter(Objects::nonNull).count();
         return count == 0 ? 0 : getTotalMonthSalary() / count;
     }
+
+//    public void growSalary(int percent) {
+//        for (:
+//             ) {
+//
+//        }
+//    }
 
     public void addEmployee(Employee employee) {
         for (int i = 0; i < employees.length; i++) {
@@ -65,7 +70,7 @@ public class EmployeeBook {
 
     public void removeEmployee(String secondName, String name, String middleName) {
         for (int i = 0; i < employees.length; i++) {
-            if (compareFullName(employees[i], secondName, name, middleName)) {
+            if (employees[i] != null && compareFullName(employees[i], secondName, name, middleName)) {
                 employees[i] = null;
                 return;
             }
@@ -76,6 +81,9 @@ public class EmployeeBook {
     public void printEmployeesByDepartments() {
         HashMap<Integer, List<Employee>> departments = new HashMap<>();
         for (Employee value : employees) {
+            if (value == null) {
+                continue;
+            }
             List<Employee> currentList = departments.get(value.getIdDepartment());
             if (currentList == null) {
                 currentList = new ArrayList<>();
