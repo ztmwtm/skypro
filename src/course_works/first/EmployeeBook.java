@@ -77,13 +77,13 @@ public class EmployeeBook {
             if (value == null) {
                 continue;
             }
-            List<Employee> currentList = departments.get(value.getIdDepartment());
+            List<Employee> currentList = departments.get(value.getDepartmentID());
             if (currentList == null) {
                 currentList = new ArrayList<>();
                 currentList.add(value);
-                departments.put(value.getIdDepartment(), currentList);
+                departments.put(value.getDepartmentID(), currentList);
             } else {
-                departments.get(value.getIdDepartment()).add(value);
+                departments.get(value.getDepartmentID()).add(value);
             }
         }
 
@@ -107,7 +107,7 @@ public class EmployeeBook {
     public void printMinSalaryWithDepartmentID(int id) {
         Optional<Employee> employee = Arrays.stream(employees)
                                 .filter(Objects::nonNull)
-                                .filter(e -> e.getIdDepartment() == id)
+                                .filter(e -> e.getDepartmentID() == id)
                                 .reduce((e1, e2) -> e1.getSalary() < e2.getSalary() ? e1 : e2);
         System.out.println(employee.map(value -> "Minimum salary in department with id " + id + ": \n" + value)
                                     .orElseGet(() -> "Not found employees with department id " + id));
@@ -116,7 +116,7 @@ public class EmployeeBook {
     public void printMaxSalaryWithDepartmentID(int id) {
         Optional<Employee> employee = Arrays.stream(employees)
                 .filter(Objects::nonNull)
-                .filter(e -> e.getIdDepartment() == id)
+                .filter(e -> e.getDepartmentID() == id)
                 .reduce((e1, e2) -> e1.getSalary() > e2.getSalary() ? e1 : e2);
         System.out.println(employee.map(value -> "Maximum salary in department with id " + id + ": \n" + value)
                                     .orElseGet(() -> "Not found employees with department id " + id));
@@ -125,17 +125,17 @@ public class EmployeeBook {
     public void printSalaryWithDepartmentID(int id) {
         System.out.printf("Salary in department with id %d: %.2f\n", id, (double) Arrays.stream(employees)
                 .filter(Objects::nonNull)
-                .filter(e -> e.getIdDepartment() == id)
+                .filter(e -> e.getDepartmentID() == id)
                 .map(Employee::getSalary)
                 .mapToLong(Long::longValue)
                 .sum() / 100);
     }
 
     public void printAverageSalaryWithDepartmentID(int id) {
-        int count = (int) Arrays.stream(employees).filter(Objects::nonNull).filter(e -> e.getIdDepartment() == id).count();
+        int count = (int) Arrays.stream(employees).filter(Objects::nonNull).filter(e -> e.getDepartmentID() == id).count();
         System.out.printf("Average salary in department with id %d: %.2f\n", id, (double) Arrays.stream(employees)
                 .filter(Objects::nonNull)
-                .filter(e -> e.getIdDepartment() == id)
+                .filter(e -> e.getDepartmentID() == id)
                 .map(Employee::getSalary)
                 .mapToLong(Long::longValue)
                 .sum() / count / 100);
@@ -145,7 +145,7 @@ public class EmployeeBook {
         double multiplier = 1 + (double) percent / 100;
         Arrays.stream(employees)
                 .filter(Objects::nonNull)
-                .filter(e -> e.getIdDepartment() == id)
+                .filter(e -> e.getDepartmentID() == id)
                 .forEach(e -> e.setSalary((long) (e.getSalary() * multiplier)));
     }
 
@@ -153,7 +153,7 @@ public class EmployeeBook {
         System.out.printf("All employees of department with id %d:\n", id);
         Arrays.stream(employees)
                 .filter(Objects::nonNull)
-                .filter(e -> e.getIdDepartment() == id)
+                .filter(e -> e.getDepartmentID() == id)
                 .forEach(e -> System.out.printf("id = %d, second name = %s, name = %s, middle name = %s, salary = %.2f\n"
                         , e.getId(), e.getSecondName(),e.getName(),e.getMiddleName(), (double) e.getSalary() / 100 ));
     }
@@ -194,7 +194,7 @@ public class EmployeeBook {
         for (Employee employee : employees) {
             if (employee != null && compareFullName(employee, secondName, name, middleName)) {
                 employee.setSalary((long) (newSalary * 100));
-                employee.setIdDepartment(newDepartmentID);
+                employee.setDepartmentID(newDepartmentID);
             }
         }
     }

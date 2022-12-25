@@ -8,14 +8,14 @@ public class Employee {
     private String secondName;
     private String middleName;
     private long salary;
-    private int idDepartment;
+    private int departmentID;
 
     public Employee(String secondName, String name, String middleName, long salary, int idDepartment) {
         this.name = name;
         this.secondName = secondName;
         this.middleName = middleName;
         this.salary = salary;
-        this.idDepartment = idDepartment;
+        this.departmentID = idDepartment;
         this.id = setId();
     }
 
@@ -53,17 +53,17 @@ public class Employee {
         this.salary = salary;
     }
 
-    public int getIdDepartment() {
-        return idDepartment;
+    public int getDepartmentID() {
+        return departmentID;
     }
 
-    public void setIdDepartment(int idDepartment) {
-        this.idDepartment = idDepartment;
+    public void setDepartmentID(int departmentID) {
+        this.departmentID = departmentID;
     }
 
     @Override
     public String toString() {
         return String.format("Employee: id|%-5d|%-20s %-20s %-20s|   Salary |%10.2f|   DepartmentID |%3d|",
-                                        id, secondName, name, middleName, (double)salary / 100 , idDepartment);
+                                        id, secondName, name, middleName, (double)salary / 100 , departmentID);
     }
 }
