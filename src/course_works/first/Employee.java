@@ -63,13 +63,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", secondName='" + secondName + '\'' +
-                ", name='" + name + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", salary=" + ((double)salary / 100) +
-                ", idDepartment=" + idDepartment +
-                '}';
+        return String.format("Employee: id|%-5d|%-20s %-20s %-20s|   Salary |%10.2f|   DepartmentID |%3d|",
+                                        id, secondName, name, middleName, (double)salary / 100 , idDepartment);
     }
 }
