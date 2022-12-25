@@ -199,6 +199,15 @@ public class EmployeeBook {
         }
     }
 
+    public void editEmployee(long id, double newSalary, int newDepartmentID) {
+        for (Employee employee : employees) {
+            if (employee != null && employee.getId() == id) {
+                employee.setSalary((long) (newSalary * 100));
+                employee.setDepartmentID(newDepartmentID);
+            }
+        }
+    }
+
 
     private boolean compareFullName(Employee employee, String secondName, String name, String middleName) {
         return employee.getName().equals(name)
