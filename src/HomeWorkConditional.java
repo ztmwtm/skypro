@@ -58,20 +58,22 @@ public class HomeWorkConditional {
         if (isKindergartenAge) {
             System.out.printf("Если возраст человека равен %d, то ему нужно ходить в детский сад.", age);
         }
-        if (isSchoolAge) {
-            System.out.printf("Если возраст человека равен %d, то ему нужно ходить в школу.", age);
-        }
-        if (isInstituteAge) {
-            System.out.printf("Если возраст человека равен %d, то ему нужно ходить в институт.", age);
-        }
-        if (isWorkAge) {
-            System.out.printf("Если возраст человека равен %d, то ему нужно ходить на работу.", age);
-        }
-        if (isPensionAge) {
-            System.out.printf("Если возраст человека равен %d, то он пенсионер.", age);
-        }
-        if (isItPossible) {
-            System.out.printf("Если возраст человека равен %d, то столько не живут ¯\\_(ツ)_/¯.", age);
+        else {
+            if (isSchoolAge) {
+                System.out.printf("Если возраст человека равен %d, то ему нужно ходить в школу.", age);
+            }
+            if (isInstituteAge) {
+                System.out.printf("Если возраст человека равен %d, то ему нужно ходить в институт.", age);
+            }
+            if (isWorkAge) {
+                System.out.printf("Если возраст человека равен %d, то ему нужно ходить на работу.", age);
+            }
+            if (isPensionAge) {
+                System.out.printf("Если возраст человека равен %d, то он пенсионер.", age);
+            }
+            if (isItPossible) {
+                System.out.printf("Если возраст человека равен %d, то столько не живут ¯\\_(ツ)_/¯.", age);
+            }
         }
     }
 
@@ -85,11 +87,13 @@ public class HomeWorkConditional {
         if (isNotAllowed) {
             System.out.printf("Если возраст ребенка равен %d, то ему нельзя кататься на аттракционе.", age);
         }
-        if (isAllowedWithParents) {
-            System.out.printf("Если возраст ребенка равен %d, то ему можно кататься на аттракционе в сопровождении.", age);
-        }
-        if (isAllowedWithoutParents) {
-            System.out.printf("Если возраст ребенка равен %d, то ему можно кататься на аттракционе без сопровождения взрослого.", age);
+        else {
+            if (isAllowedWithParents) {
+                System.out.printf("Если возраст ребенка равен %d, то ему можно кататься на аттракционе в сопровождении.", age);
+            }
+            if (isAllowedWithoutParents) {
+                System.out.printf("Если возраст ребенка равен %d, то ему можно кататься на аттракционе без сопровождения взрослого.", age);
+            }
         }
     }
 
