@@ -4,11 +4,11 @@ public class HomeWorkConditional2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-//        task1(scanner);
-//        task2(scanner);
-//        task3(scanner);
+        task1(scanner);
+        task2(scanner);
+        task3(scanner);
         task4(scanner);
-//        task5(scanner);
+        task5(scanner);
     }
 
     private static void task1(Scanner scanner) {
