@@ -57,7 +57,7 @@ public class LoopHomeWork1 {
     private static void task5() {
 //        IntStream.iterate(1904, i -> i+=4).limit(49).forEach(System.out::println);
         for (int i = 1904; i <= 2096; i+=4) {
-            System.out.println(i);
+            System.out.printf("%d год является високосным\n", i);
         }
     }
 
