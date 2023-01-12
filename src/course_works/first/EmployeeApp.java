@@ -2,7 +2,7 @@ package course_works.first;
 
 import java.util.Random;
 
-public class Main {
+public class EmployeeApp {
     public static void main(String[] args) {
         EmployeeBook employeeBook = new EmployeeBook();
         System.out.println("============ADD 10 EMPLOYEES============");
@@ -12,17 +12,18 @@ public class Main {
         System.out.println();
         System.out.println("============PRINT ALL EMPLOYEES============");
         employeeBook.printAllEmployees();
-        System.out.printf("Total month salary: %.2f\n", (double)employeeBook.getTotalMonthSalary() / 100);
+        System.out.println("============PRINT SALARY STATS============");
+        System.out.printf("Total month salary: %.2f\n", (double) employeeBook.getTotalMonthSalary() / 100);
         employeeBook.printMinSalaryEmployee();
         employeeBook.printMaxSalaryEmployee();
-        System.out.printf("Average month salary: %.2f\n", (double)employeeBook.getAverageSalary() / 100);
+        System.out.printf("Average month salary: %.2f\n", (double) employeeBook.getAverageSalary() / 100);
         System.out.println();
         System.out.println("============PRINT ALL NAMES OF EMPLOYEES============");
         employeeBook.printFullNamesAllEmployees();
         System.out.println();
         System.out.println("============ADD 11% TO ALL SALARY============");
         employeeBook.growSalary(11);
-        System.out.printf("Total month salary: %.2f\n", (double)employeeBook.getTotalMonthSalary() / 100);
+        System.out.printf("Total month salary: %.2f\n", (double) employeeBook.getTotalMonthSalary() / 100);
         employeeBook.printMinSalaryWithDepartmentID(1);
         employeeBook.printMaxSalaryWithDepartmentID(2);
         employeeBook.printSalaryWithDepartmentID(3);
@@ -58,9 +59,9 @@ public class Main {
         String[] middleName = {"IVANOVICH", "PETROVICH", "SIDOROVICH", "SERGEIVICH", "KROTOVICH", "BINGOVICH", "BONGOVICH"};
         Random random = new Random();
         return new Employee(secondName[random.nextInt(secondName.length)],
-                        name[random.nextInt(name.length)],
-                        middleName[random.nextInt(middleName.length)],
-                        random.nextLong(10000L, 100000000L),
-                        random.nextInt(1,6));
+                name[random.nextInt(name.length)],
+                middleName[random.nextInt(middleName.length)],
+                random.nextLong(10000L, 100000000L),
+                random.nextInt(1, 6));
     }
 }

@@ -24,7 +24,6 @@ public class Employee {
         return count;
     }
 
-
     public static long getCount() {
         return count;
     }
@@ -64,6 +63,6 @@ public class Employee {
     @Override
     public String toString() {
         return String.format("Employee: |id%5d|%20s|%20s|%20s|  Salary |%10.2f|  DepartmentID |%3d|",
-                                        id, secondName, name, middleName, (double)salary / 100 , departmentID);
+                id, secondName, name, middleName, (double) salary / 100, departmentID);
     }
 }
