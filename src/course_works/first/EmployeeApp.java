@@ -61,7 +61,7 @@ public class EmployeeApp {
         return new Employee(secondName[random.nextInt(secondName.length)],
                 name[random.nextInt(name.length)],
                 middleName[random.nextInt(middleName.length)],
-                random.nextLong(10000L, 100000000L),
+                random.nextLong(10_000_00L, 1_000_000_00L),
                 random.nextInt(1, 6));
     }
 }
