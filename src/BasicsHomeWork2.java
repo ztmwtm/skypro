@@ -1,4 +1,4 @@
-public class HomeWork2 {
+public class BasicsHomeWork2 {
     public static void main(String[] args) {
 
         task1();
@@ -12,7 +12,7 @@ public class HomeWork2 {
 
     }
 
-    static void task1() {
+    private static void task1() {
         byte by = Byte.MAX_VALUE;
         short sh = Short.MIN_VALUE;
         int in = Integer.MAX_VALUE;
@@ -31,7 +31,7 @@ public class HomeWork2 {
 
     }
 
-    static void task2() {
+    private static void task2() {
         float f = 27.12f;
         long l = 987678965549L;
         short s = 2786;
@@ -41,7 +41,7 @@ public class HomeWork2 {
         byte b = 67;
     }
 
-    static void task3() {
+    private static void task3() {
         byte lp = 23;
         byte as = 27;
         byte ea = 30;
@@ -51,7 +51,7 @@ public class HomeWork2 {
         System.out.printf("На каждого ученика рассчитано %d листов бумаги\n", totalPapers / (lp + as + ea));
     }
 
-    static void task4() {
+    private static void task4() {
         byte effInTwoMin = 16;
         short twentyMin = (short) (effInTwoMin * 10);
         short day = (short) (effInTwoMin * 30 * 24);
@@ -64,11 +64,11 @@ public class HomeWork2 {
 
     }
 
-    static void task5() {
+    private static void task5() {
         byte total = 120;
         byte white = 2;
         byte brown = 4;
-        byte classesAmount  = (byte) (total / (white + brown));
+        byte classesAmount = (byte) (total / (white + brown));
         byte totalWhite = (byte) (white * classesAmount);
         byte totalBrown = (byte) (brown * classesAmount);
 
@@ -76,7 +76,7 @@ public class HomeWork2 {
 
     }
 
-    static void task6() {
+    private static void task6() {
         byte bananas = 80;
         byte milk = 105;
         byte iceCream = 100;
@@ -86,11 +86,11 @@ public class HomeWork2 {
         System.out.printf("%.2f кг\n", (float) total / 1000);
     }
 
-    static void task7() {
+    private static void task7() {
         short min = 250;
         short max = 500;
         short total = 7000;
-        float average =  (float) (min + max) / 2;
+        float average = (float) (min + max) / 2;
         byte minDays = (byte) (total / max);
         byte maxDays = (byte) (total / min);
         float averageDays = total / average;
@@ -98,7 +98,7 @@ public class HomeWork2 {
 
     }
 
-    static void task8() {
+    private static void task8() {
         int masha = 6776000;
         int den = 8369000;
         int kri = 7623000;
@@ -111,8 +111,8 @@ public class HomeWork2 {
         int denDiff = denAfter - den;
         int kriDiff = kriAfter - kri;
 
-        System.out.printf("Маша теперь получает %.2f рублей. Годовой доход вырос на %.2f рублей\n", (float)mashaAfter / 100, (float)mashaDiff / 100 );
-        System.out.printf("Денис теперь получает %.2f рублей. Годовой доход вырос на %.2f рублей\n", (float)denAfter / 100, (float)denDiff / 100 );
-        System.out.printf("Кристина теперь получает %.2f рублей. Годовой доход вырос на %.2f рублей\n", (float)kriAfter / 100, (float)kriDiff / 100 );
+        System.out.printf("Маша теперь получает %.2f рублей. Годовой доход вырос на %.2f рублей\n", (float) mashaAfter / 100, (float) mashaDiff / 100);
+        System.out.printf("Денис теперь получает %.2f рублей. Годовой доход вырос на %.2f рублей\n", (float) denAfter / 100, (float) denDiff / 100);
+        System.out.printf("Кристина теперь получает %.2f рублей. Годовой доход вырос на %.2f рублей\n", (float) kriAfter / 100, (float) kriDiff / 100);
     }
 }

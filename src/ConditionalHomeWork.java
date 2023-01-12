@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class HomeWorkConditional {
+public class ConditionalHomeWork {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         task1(scanner);
