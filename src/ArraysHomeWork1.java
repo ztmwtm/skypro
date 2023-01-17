@@ -21,7 +21,7 @@ public class ArraysHomeWork1 {
             }
         }
 
-        System.out.println(Arrays.toString(doubles).replaceAll("\\[|\\]", ""));
+        System.out.println(Arrays.toString(doubles).replaceAll("[\\[\\]]", ""));
 
         String[] strings = Arrays.stream(longs).mapToObj(String::valueOf).toArray(String[]::new);
         System.out.println(String.join(", ", strings));
