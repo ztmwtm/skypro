@@ -1,3 +1,5 @@
+package Syntax;
+
 public class BasicsHomeWork1 {
 
     public static void main(String[] args) {

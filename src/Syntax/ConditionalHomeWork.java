@@ -1,3 +1,5 @@
+package Syntax;
+
 import java.util.Scanner;
 
 public class ConditionalHomeWork {

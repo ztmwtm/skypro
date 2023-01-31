@@ -1,3 +1,4 @@
+package Syntax;
 
 import java.util.stream.IntStream;
 

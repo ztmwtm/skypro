@@ -1,3 +1,5 @@
+package Syntax;
+
 import java.util.Arrays;
 
 public class ArraysHomeWork2 {
