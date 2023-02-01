@@ -1,4 +1,4 @@
-package Syntax.ObjectsHomeWork1;
+package Syntax.ObjectsHomeWork;
 
 public class Main {
     public static void main(String[] args) {
