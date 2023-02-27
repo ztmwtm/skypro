@@ -1,8 +1,8 @@
-package course2.homeWorkOOP;
+package Core.OOP;
 
 import java.util.Random;
 
-public class SlytherinStudent extends HogwartsStudent implements Slytherin, Comparable<SlytherinStudent> {
+public class SlytherinStudent extends HogwartsStudent {
 
     private int cunning;
     private int determination;
@@ -46,10 +46,19 @@ public class SlytherinStudent extends HogwartsStudent implements Slytherin, Comp
         this.lustForPower = random.nextInt(100);
     }
 
-    @Override
-    public int compareTo(SlytherinStudent o) {
-        return this.cunning + this.determination + this.ambition + this.resourcefulness + this.lustForPower
+    public void compareTo(SlytherinStudent o) {
+        int compare = this.cunning + this.determination + this.ambition + this.resourcefulness + this.lustForPower
                 - o.cunning - o.determination - o.ambition - o.resourcefulness - o.lustForPower;
+
+        if (compare > 0) {
+            System.out.printf("%s %s is a better Slytherin than %s %s\n", this.getName(), this.getSecondName(), o.getName(), o.getSecondName());
+        }
+        if (compare == 0) {
+            System.out.printf("%s %s is a same Slytherin like %s %s\n", this.getName(), this.getSecondName(), o.getName(), o.getSecondName());
+        }
+        if (compare < 0) {
+            System.out.printf("%s %s is a better Slytherin than %s %s\n", o.getName(), o.getSecondName(), this.getName(), this.getSecondName());
+        }
     }
 
 }

@@ -1,12 +1,12 @@
-package course2.homeWorkOOP;
+package Core.OOP;
 
 import java.util.Random;
 
-public class GryffindorStudent extends HogwartsStudent implements Gryffindor, Comparable<GryffindorStudent> {
+public class GryffindorStudent extends HogwartsStudent {
 
-    private int nobility;
-    private int honor;
-    private int courage;
+    private final int nobility;
+    private final int honor;
+    private final int courage;
 
     @Override
     public void printInfo() {
@@ -37,8 +37,16 @@ public class GryffindorStudent extends HogwartsStudent implements Gryffindor, Co
         this.courage = random.nextInt(100);
     }
 
-    @Override
-    public int compareTo(GryffindorStudent o) {
-        return this.nobility + this.honor + this.courage - o.nobility - o.honor - o.courage;
+    public void compareTo(GryffindorStudent o) {
+        int compare = this.nobility + this.honor + this.courage - o.nobility - o.honor - o.courage;
+        if (compare > 0) {
+            System.out.printf("%s %s is a better Gryffindor than %s %s\n", this.getName(), this.getSecondName(), o.getName(), o.getSecondName());
+        }
+        if (compare == 0) {
+            System.out.printf("%s %s is a same Gryffindor like %s %s\n", this.getName(), this.getSecondName(), o.getName(), o.getSecondName());
+        }
+        if (compare < 0) {
+            System.out.printf("%s %s is a better Gryffindor than %s %s\n", o.getName(), o.getSecondName(), this.getName(), this.getSecondName());
+        }
     }
 }

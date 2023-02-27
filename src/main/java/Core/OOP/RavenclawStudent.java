@@ -1,8 +1,8 @@
-package course2.homeWorkOOP;
+package Core.OOP;
 
 import java.util.Random;
 
-public class RavenclawStudent extends HogwartsStudent implements Ravenclaw, Comparable<RavenclawStudent> {
+public class RavenclawStudent extends HogwartsStudent {
     private int smart;
     private int wise;
     private int witty;
@@ -40,9 +40,18 @@ public class RavenclawStudent extends HogwartsStudent implements Ravenclaw, Comp
         this.creativity = random.nextInt(100);
     }
 
-    @Override
-    public int compareTo(RavenclawStudent o) {
-        return this.smart + this.wise + this.witty + this.creativity - o.smart - o.wise - o.witty - o.creativity;
+
+    public void compareTo(RavenclawStudent o) {
+        int compare = this.smart + this.wise + this.witty + this.creativity - o.smart - o.wise - o.witty - o.creativity;
+        if (compare > 0) {
+            System.out.printf("%s %s is a better Ravenclaw than %s %s\n", this.getName(), this.getSecondName(), o.getName(), o.getSecondName());
+        }
+        if (compare == 0) {
+            System.out.printf("%s %s is a same Ravenclaw like %s %s\n", this.getName(), this.getSecondName(), o.getName(), o.getSecondName());
+        }
+        if (compare < 0) {
+            System.out.printf("%s %s is a better Ravenclaw than %s %s\n", o.getName(), o.getSecondName(), this.getName(), this.getSecondName());
+        }
     }
 
 }

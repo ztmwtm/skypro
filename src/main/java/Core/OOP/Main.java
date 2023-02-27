@@ -1,4 +1,4 @@
-package course2.homeWorkOOP;
+package Core.OOP;
 
 
 import java.util.ArrayList;
@@ -22,7 +22,9 @@ public class Main {
         RavenclawStudent parvatiPatil = new RavenclawStudent("Parvati", "Patil");
         RavenclawStudent marcusBelby = new RavenclawStudent("Marcus", "Belby");
 
-        List<Hogwarts> students = new ArrayList<>();
+
+
+        List<HogwartsStudent> students = new ArrayList<>();
         students.add(harryPotter);
         students.add(hermioneGranger);
         students.add(ronWeasley);
@@ -36,8 +38,19 @@ public class Main {
         students.add(parvatiPatil);
         students.add(marcusBelby);
 
-        students.forEach(Hogwarts::printInfo);
+        System.out.println("=============INFO==============");
+        students.forEach(HogwartsStudent::printInfo);
+        System.out.println();
 
+        System.out.println("======COMPARE DIFFERENT FACULTY STUDENTS======");
+        harryPotter.compareTo(dracoMalfoy);
+        System.out.println();
+
+        System.out.println("======COMPARE SAME FACULTY STUDENTS======");
+        harryPotter.compareTo(hermioneGranger);
+        dracoMalfoy.compareTo(grahamMontague);
+        zachariasSmith.compareTo(cedricDiggory);
+        choChang.compareTo(parvatiPatil);
 
 
     }

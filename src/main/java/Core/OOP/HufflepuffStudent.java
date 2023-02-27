@@ -1,12 +1,12 @@
-package course2.homeWorkOOP;
+package Core.OOP;
 
 import java.util.Random;
 
-public class HufflepuffStudent extends HogwartsStudent implements Hufflepuff, Comparable<HufflepuffStudent> {
+public class HufflepuffStudent extends HogwartsStudent {
 
-    private int hardworking;
-    private int loyal;
-    private int honest;
+    private final int hardworking;
+    private final int loyal;
+    private final int honest;
 
     @Override
     public void printInfo() {
@@ -37,8 +37,16 @@ public class HufflepuffStudent extends HogwartsStudent implements Hufflepuff, Co
         this.honest = random.nextInt(100);
     }
 
-    @Override
-    public int compareTo(HufflepuffStudent o) {
-        return this.hardworking + this.loyal + this.honest - o.hardworking - o.loyal - o.honest;
+    public void compareTo(HufflepuffStudent o) {
+        int compare = this.hardworking + this.loyal + this.honest - o.hardworking - o.loyal - o.honest;
+        if (compare > 0) {
+            System.out.printf("%s %s is a better Hufflepuff than %s %s\n", this.getName(), this.getSecondName(), o.getName(), o.getSecondName());
+        }
+        if (compare == 0) {
+            System.out.printf("%s %s is a same Hufflepuff like %s %s\n", this.getName(), this.getSecondName(), o.getName(), o.getSecondName());
+        }
+        if (compare < 0) {
+            System.out.printf("%s %s is a better Hufflepuff than %s %s\n", o.getName(), o.getSecondName(), this.getName(), this.getSecondName());
+        }
     }
 }
