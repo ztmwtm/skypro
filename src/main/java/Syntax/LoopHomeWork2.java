@@ -1,4 +1,4 @@
-package main.java.Syntax;
+package Syntax;
 
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;

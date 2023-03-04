@@ -1,4 +1,4 @@
-package main.java.Syntax;
+package Syntax;
 
 public class BasicsHomeWork2 {
     public static void main(String[] args) {

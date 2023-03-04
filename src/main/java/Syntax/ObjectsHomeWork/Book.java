@@ -1,4 +1,4 @@
-package main.java.Syntax.ObjectsHomeWork;
+package Syntax.ObjectsHomeWork;
 
 import java.util.Objects;
 
