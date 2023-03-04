@@ -1,4 +1,4 @@
-package main.java.Syntax;
+package Syntax;
 
 public class StringHomeWork1 {
     private static Employee employee = new Employee();

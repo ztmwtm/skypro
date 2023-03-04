@@ -2,7 +2,7 @@ package course_works.second.diary.tasks;
 
 import course_works.second.diary.utils.Type;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class MonthlyTask extends Task {
     public MonthlyTask(String title, String description, Type type) {
@@ -10,7 +10,8 @@ public class MonthlyTask extends Task {
     }
 
     @Override
-    public boolean appersIn(LocalDateTime dateTime) {
-        return false;
+    public boolean appersIn(LocalDate dateTime) {
+        return dateTime.getDayOfMonth() == this.getDateTime().getDayOfMonth();
+
     }
 }

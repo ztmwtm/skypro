@@ -1,7 +1,6 @@
-package main.java.Syntax;
+package Syntax;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class StringHomeWork2 {
     public static void main(String[] args) {

@@ -2,6 +2,7 @@ package course_works.second.diary.tasks;
 
 import course_works.second.diary.utils.Type;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -23,7 +24,7 @@ public abstract class Task {
         this.dateTime = LocalDateTime.now();
     }
 
-    public abstract boolean appersIn(LocalDateTime dateTime);
+    public abstract boolean appersIn(LocalDate dateTime);
 
     public String getTitle() {
         return title;
@@ -68,12 +69,12 @@ public abstract class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
-                "title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", type=" + type +
-                ", id=" + id +
-                ", dateTime=" + dateTime +
-                '}';
+        return """
+                        %s
+                %s
+                %s
+                
+                """.formatted(title, type, description);
+
     }
 }

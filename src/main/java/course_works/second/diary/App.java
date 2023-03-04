@@ -53,15 +53,14 @@ public class App {
                 4. Monthly task
                 5. Yearly task""");
         int taskPeriod = ConsoleHelper.readInt(1, 5);
-        Task task = switch (taskPeriod) {
+
+        return switch (taskPeriod) {
             case 1 -> new OneTimeTask(title, description, type);
-//            case 2 -> TODO
-//            case 3 -> TODO
-//            case 4 -> TODO
-//            case 5 -> TODO
+            case 2 -> new DailyTask(title, description, type);
+            case 3 -> new WeeklyTask(title, description, type);
+            case 4 -> new MonthlyTask(title, description, type);
+            case 5 -> new YearlyTask(title, description, type);
             default -> throw new IllegalStateException("Unexpected value: " + taskPeriod);
         };
-
-        return task;
     }
 }

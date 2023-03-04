@@ -1,6 +1,4 @@
-package main.java.Syntax;
-
-import java.util.stream.IntStream;
+package Syntax;
 
 public class LoopHomeWork1 {
     public static void main(String[] args) {

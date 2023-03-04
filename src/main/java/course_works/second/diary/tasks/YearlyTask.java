@@ -2,7 +2,7 @@ package course_works.second.diary.tasks;
 
 import course_works.second.diary.utils.Type;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class YearlyTask extends Task {
     public YearlyTask(String title, String description, Type type) {
@@ -10,7 +10,8 @@ public class YearlyTask extends Task {
     }
 
     @Override
-    public boolean appersIn(LocalDateTime dateTime) {
-        return false;
+    public boolean appersIn(LocalDate dateTime) {
+        //Logic of Leap years???????
+        return dateTime.getDayOfYear() == this.getDateTime().getDayOfYear();
     }
 }

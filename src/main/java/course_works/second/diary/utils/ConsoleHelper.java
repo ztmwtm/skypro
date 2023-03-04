@@ -28,7 +28,7 @@ public class ConsoleHelper {
             try {
                 return consoleIn.readLine();
             } catch (IOException var1) {
-                System.out.println("Произошла ошибка при попытке ввода текста. Попробуйте еще раз.");
+                System.out.println("An error occurred while trying to enter text. Try again.");
             }
         }
     }
@@ -38,7 +38,7 @@ public class ConsoleHelper {
             try {
                 return Integer.parseInt(readString());
             } catch (NumberFormatException var1) {
-                System.out.println("Произошла ошибка при попытке ввода числа. Попробуйте еще раз.");
+                System.out.println("An error occurred while trying to enter a number. Try again.");
             }
         }
     }
@@ -52,10 +52,10 @@ public class ConsoleHelper {
                     return result;
                 }
                 else {
-                    System.out.printf("Введите число в диапазоне %d %d включительно\n", start, end);
+                    System.out.printf("Please enter a number in diapason %d - %d inclusive\n", start, end);
                 }
             } catch (NumberFormatException var1) {
-                System.out.println("Произошла ошибка при попытке ввода числа. Попробуйте еще раз.");
+                System.out.println("An error occurred while trying to enter a number. Try again.");
             }
         }
     }

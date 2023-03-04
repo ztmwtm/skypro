@@ -2,7 +2,7 @@ package course_works.second.diary.tasks;
 
 import course_works.second.diary.utils.Type;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class OneTimeTask extends Task {
 
@@ -11,8 +11,7 @@ public class OneTimeTask extends Task {
     }
 
     @Override
-    public boolean appersIn(LocalDateTime dateTime) {
-
-        return true;
+    public boolean appersIn(LocalDate dateTime) {
+        return dateTime.equals(this.getDateTime().toLocalDate());
     }
 }
