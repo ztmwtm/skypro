@@ -1,19 +1,13 @@
 package core.exceptions;
 
+import org.springframework.lang.NonNull;
+
 public class ExceptionsHomeWork {
     public static void main(String[] args) {
 
-        System.out.println(checkPassword("123z", "DDFFF", "DDFFF"));
-        System.out.println(checkPassword("", "", ""));
-        System.out.println(checkPassword("123z", "z$DDFFF", "z$DDFFF"));
-        System.out.println(checkPassword("123z^^^", "z$DDFFF", "z$DDFFF"));
-        System.out.println(checkPassword("AS12_12aaa", "z$DDFFF", "z$DDFFF"));
-        System.out.println(checkPassword("AS12_12aaaaa", "z$DDddddddddddddddddddddddddFFF", "z$DDddddddddddddddddddddddddFFF"));
-        System.out.println(checkPassword("AS12_12aaaaa", "z$DDddddd", "z$DDdd"));
-        System.out.println(checkPassword("AS12_12aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "z$DDFFF", "z$DDFFF"));
     }
 
-    public static boolean checkPassword(String login, String password, String confirmPassword) {
+    public static boolean checkPassword(@NonNull String login, @NonNull String password, @NonNull String confirmPassword) {
         try {
             if (login.length() > 20) {
                 throw new WrongLoginException("So sad your login length is " + login.length() + ", but must be not bigger then 20.");
