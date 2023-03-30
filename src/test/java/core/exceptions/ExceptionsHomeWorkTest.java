@@ -8,17 +8,6 @@ import static core.exceptions.ExceptionsHomeWork.checkPassword;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ExceptionsHomeWorkTest {
-
-//    @Test
-//    @Tag("ExceptionHomeWork")
-//    @DisplayName("checkPassword Test")
-//    void checkPasswordNull() {
-//        String login = null;
-//        String password = null;
-//        String confirmPassword = null;
-//        assertThrows(NullPointerException.class, () -> checkPassword(login,password,confirmPassword));
-//    }
-
     @Test
     @Tag("ExceptionHomeWork")
     @DisplayName("checkPassword Test")
@@ -60,7 +49,7 @@ class ExceptionsHomeWorkTest {
     }
 
     @Test
-    @Tag("ExceptionHomeWork")
+    @Tag("ExceptionHomeWork2")
     @DisplayName("checkPassword Test")
     void checkPasswordFalse2() {
         String login = "AS12_12aaa";
@@ -70,7 +59,7 @@ class ExceptionsHomeWorkTest {
     }
 
     @Test
-    @Tag("ExceptionHomeWork")
+    @Tag("ExceptionHomeWork2")
     @DisplayName("checkPassword Test")
     void checkPasswordFalse3() {
         String login = "AS12_12aaaaa";
