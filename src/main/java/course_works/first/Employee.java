@@ -1,5 +1,7 @@
 package course_works.first;
 
+import java.util.List;
+
 public class Employee {
 
     private static long count = 0;
@@ -10,6 +12,8 @@ public class Employee {
     private long salary;
     private int departmentID;
 
+    private List<String> fullName;
+
     public Employee(String secondName, String name, String middleName, long salary, int idDepartment) {
         this.name = name;
         this.secondName = secondName;
@@ -17,11 +21,16 @@ public class Employee {
         this.salary = salary;
         this.departmentID = idDepartment;
         this.id = setId();
+        this.fullName = List.of(secondName, name, middleName);
     }
 
     private long setId() {
         count++;
         return count;
+    }
+
+    public List<String> getFullName() {
+        return fullName;
     }
 
     public static long getCount() {
