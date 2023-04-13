@@ -1,4 +1,4 @@
-package course_works.first;
+package course.works.first;
 
 import java.util.*;
 

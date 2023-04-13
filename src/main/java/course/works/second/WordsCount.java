@@ -6,7 +6,7 @@
  */
 
 
-package course_works.second;
+package course.works.second;
 
 import java.util.HashMap;
 import java.util.Locale;

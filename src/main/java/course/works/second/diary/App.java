@@ -1,9 +1,9 @@
-package course_works.second.diary;
+package course.works.second.diary;
 
-import course_works.second.diary.tasks.*;
-import course_works.second.diary.utils.ConsoleHelper;
-import course_works.second.diary.utils.TaskService;
-import course_works.second.diary.utils.Type;
+import course.works.second.diary.utils.ConsoleHelper;
+import course.works.second.diary.utils.TaskService;
+import course.works.second.diary.utils.Type;
+import course.works.second.diary.tasks.*;
 
 import java.time.LocalDate;
 
@@ -23,10 +23,11 @@ public class App {
             switch (control) {
                 case 1 -> TaskService.add(createTask());
                 case 2 -> TaskService.getAllByDate(LocalDate.now()).forEach(System.out::println);
-                case 3 -> System.exit(42);
+                default -> {
+                    break;
+                }
             }
         }
-
     }
 
 

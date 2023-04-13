@@ -1,9 +1,9 @@
-package course_works.first;
+package course.works.first;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Employee {
-
     private static long count = 0;
     private long id;
     private String name;
@@ -73,5 +73,18 @@ public class Employee {
     public String toString() {
         return String.format("Employee: |id%5d|%20s|%20s|%20s|  Salary |%10.2f|  DepartmentID |%3d|",
                 id, secondName, name, middleName, (double) salary / 100, departmentID);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return id == employee.id && salary == employee.salary && departmentID == employee.departmentID && Objects.equals(name, employee.name) && Objects.equals(secondName, employee.secondName) && Objects.equals(middleName, employee.middleName) && Objects.equals(fullName, employee.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, secondName, middleName, salary, departmentID, fullName);
     }
 }

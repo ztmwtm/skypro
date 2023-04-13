@@ -1,6 +1,6 @@
-package course_works.second.diary.tasks;
+package course.works.second.diary.tasks;
 
-import course_works.second.diary.utils.Type;
+import course.works.second.diary.utils.Type;
 
 import java.time.LocalDate;
 

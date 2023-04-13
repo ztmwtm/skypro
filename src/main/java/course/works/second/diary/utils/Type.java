@@ -1,4 +1,4 @@
-package course_works.second.diary.utils;
+package course.works.second.diary.utils;
 
 public enum Type {
 

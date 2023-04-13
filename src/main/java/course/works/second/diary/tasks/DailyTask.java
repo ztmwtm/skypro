@@ -1,9 +1,8 @@
-package course_works.second.diary.tasks;
+package course.works.second.diary.tasks;
 
-import course_works.second.diary.utils.Type;
+import course.works.second.diary.utils.Type;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class DailyTask extends Task {
     public DailyTask(String title, String description, Type type) {

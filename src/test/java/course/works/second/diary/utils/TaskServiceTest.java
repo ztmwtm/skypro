@@ -1,6 +1,5 @@
-package course_works.second.diary.utils;
+package course.works.second.diary.utils;
 
-import course_works.second.diary.tasks.DailyTask;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
